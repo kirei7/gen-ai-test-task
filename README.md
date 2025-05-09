@@ -1,36 +1,38 @@
+# Project description
+This project is a Python-based solution designed to extract, summarize, and semantically search news articles
+using Generative AI. It automates the process of gathering news content, analyzing it with AI,
+and enabling intelligent search functionality. 
+
+## The key features of the project include:
+### News Extraction
+Scrapes full-text content and headlines from provided URLs to collect news articles efficiently.
+### GenAI-Powered Summarization and Topic Identification
+Leverages Generative AI model (gpt-3.5-turbo) to generate concise summaries and identify the main topics of each
+article, ensuring key insights are captured.
+### Semantic Search
+Stores extracted articles, summaries, and topics in a vector database. Implements a semantic search feature that
+interprets user queries contextually and retrieves relevant articles.
+## Summary
+This project demonstrates the effective application of GenAI tools for real-world use cases, combining web scraping,
+natural language processing, and advanced search capabilities into a cohesive system.
+
 # Pre-requisites
 Before you start, make sure you have installed the following software:
 1. Git
 2. python3
+3. This guide assumes that you work in unix shell. For Windows users - consider installing git bash or using Linux subsystem.
 
-This guide assumes that you work in unix shell. For Windows users - consider installing git bash or using Linux subsystem.
-
-# Project description
-This project is a Python-based solution designed to extract, summarize, and semantically search news articles
-using Generative AI (GenAI) tools. It automates the process of gathering news content, analyzing it with AI,
-and enabling intelligent search functionality. The key features of the project include:
-
-### News Extraction
-Scrapes full-text content and headlines from provided URLs to collect news articles efficiently.
-
-### GenAI-Powered Summarization and Topic Identification
-Leverages Generative AI models (e.g., OpenAI's GPT) to generate concise summaries and identify the main topics of each article, ensuring key insights are captured.
-
-### Semantic Search
-Stores extracted articles, summaries, and topics in a vector database. Implements a semantic search feature that interprets user queries contextually and retrieves relevant articles.
-
-# Summary
-This project demonstrates the effective application of GenAI tools for real-world use cases, combining web scraping, natural language processing, and advanced search capabilities into a cohesive system.
+### To improve your experience with this project make sure to go through this readme first!
 
 # Quick start
+0. All the commands from this guide must be executed in the root project directory unless specified otherwise.
 1. Pull the repo
 2. Create .env file in root project directory and put your openai api key inside 
     - file content:
     ```dotenv
        OPENAI_API_KEY=<YOUR_API_KEY>
-    ``` 
+    ```
 3. Create venv
-   - all the following commands must be executed in the root project directory unless otherwise specified
    - command:
     ```shell
        python3 -m venv venv
@@ -51,6 +53,11 @@ This project demonstrates the effective application of GenAI tools for real-worl
        python3 test_search.py
     ```
 7. Observe execution logs
+    - application logs inform about the completed stages of execution or errors;
+    - search results provide article info;
+    - search results contain "Relevance" parameter, which indicates the relevance of the article to the query
+      and effectively it inverted distance between query and article (1 - distance = relevance);
+    - search results are sorted by relevance (more relevant articles are at the top).
 
 # Customization
 To customize via configs, look for "# Customization options" section in config.py
