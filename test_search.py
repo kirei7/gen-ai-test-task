@@ -5,7 +5,7 @@ from scraper.extractor import extract_article
 from genai.processor import process_article
 from database.vector_store import store_article, delete_all_articles
 from search.semantic_search import semantic_search
-from config import TEST_URLS, TEST_QUERIES
+from config import TEST_URLS, TEST_QUERIES, SEARCH_RESULTS_LIMIT
 
 
 def setup_test_data():
@@ -31,7 +31,7 @@ def test_search():
 
     for query in TEST_QUERIES:
         print(f"\nSearching for: '{query}'")
-        results = semantic_search(query)
+        results = semantic_search(query=query, limit=SEARCH_RESULTS_LIMIT)
 
         if results:
             print(f"Found {len(results)} results:")

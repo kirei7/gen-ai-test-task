@@ -50,6 +50,12 @@ This project demonstrates the effective application of GenAI tools for real-worl
        python3 test_search.py
     ```
 
+# Customization
+To customize via configs, look for "# Customization options" section in config.py
+- TEST_URLS - list of URLs to scrape
+- TEST_QUERIES - query to search for
+- SEARCH_RESULTS_LIMIT - number of vectors to be returned by search from DB
+
 # python cheat sheet
 Deactivate venv:
 ```shell
