@@ -32,7 +32,6 @@ def semantic_search(query: str,
 
         # Format the results
         formatted_results = []
-        print(f"Distances: {results['distances']}")
         if results and results['ids'] and len(results['ids'][0]) > 0:
             for i in range(len(results['ids'][0])):
                 # Get the document and metadata for this result
