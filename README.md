@@ -29,17 +29,22 @@ This project demonstrates the effective application of GenAI tools for real-worl
     ```shell
        OPENAI_API_KEY=<YOUR_API_KEY>
     ``` 
-3. Activate venv
+3. Create venv
+   - command:
+    ```shell
+       python3 -m venv venv
+    ```
+4. Activate venv
     - command:
     ```shell
        source venv/bin/activate
     ```
-4. Set up project dependencies
+5. Set up project dependencies
     - command:
     ```shell
        pip install -r requirements.txt
     ```
-5. Run the test file you're interested in (full functionality test is in test_search.py)
+6. Run the test file you're interested in (full functionality test is in test_search.py)
     - command:
     ```shell
        python3 test_search.py

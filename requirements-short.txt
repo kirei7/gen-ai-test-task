@@ -1,0 +1,7 @@
+chromadb==1.0.8
+langchain==0.3.25
+langchain-openai==0.3.16
+lxml_html_clean==0.4.2
+newspaper3k==0.2.8
+openai==1.78.0
+python-dotenv==1.1.0
