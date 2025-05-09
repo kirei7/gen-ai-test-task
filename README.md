@@ -42,7 +42,7 @@ This project demonstrates the effective application of GenAI tools for real-worl
 5. Set up project dependencies
     - command:
     ```shell
-       pip install -r requirements.txt
+       pip install -r requirements-short.txt
     ```
 6. Run the test file you're interested in (full functionality test is in test_search.py)
     - command:
