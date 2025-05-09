@@ -24,12 +24,13 @@ This project demonstrates the effective application of GenAI tools for real-worl
 
 # Quick start
 1. Pull the repo
-2. Create .env file with openai api key 
+2. Create .env file in root project directory and put your openai api key inside 
     - file content:
-    ```shell
+    ```dotenv
        OPENAI_API_KEY=<YOUR_API_KEY>
     ``` 
 3. Create venv
+   - all the following commands must be executed in the root project directory unless otherwise specified
    - command:
     ```shell
        python3 -m venv venv
@@ -49,12 +50,21 @@ This project demonstrates the effective application of GenAI tools for real-worl
     ```shell
        python3 test_search.py
     ```
+7. Observe execution logs
 
 # Customization
 To customize via configs, look for "# Customization options" section in config.py
 - TEST_URLS - list of URLs to scrape
 - TEST_QUERIES - query to search for
 - SEARCH_RESULTS_LIMIT - number of vectors to be returned by search from DB
+
+# Few words on project structure
+In the root directory there are several test files that demonstrate the functionality of the project. Each next entry
+in this list also tests the functionality of the previous one.
+- test_extraction.py - scrapping the news articles
+- test_genai.py - summarization and topic identification
+- test_vector_db.py - embedding and saving summarized articles to database
+- test_search.py - semantic search through the database (most complete test which demonstrates the whole project)
 
 # python cheat sheet
 Deactivate venv:
